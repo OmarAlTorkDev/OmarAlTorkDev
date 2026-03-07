@@ -1,811 +1,294 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Omar Al-Turk — Software Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --bg: #080b12;
-    --surface: #0e1422;
-    --surface2: #141926;
-    --border: #1e2740;
-    --accent: #4f8eff;
-    --accent2: #7c5dfa;
-    --accent3: #00e5a0;
-    --gold: #f0c060;
-    --text: #c9d1e8;
-    --muted: #5a6480;
-    --white: #edf2ff;
-  }
+# Omar Yousef Dawod Al-Turk 👨‍💻
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+![Banner](https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1200&q=80)
 
-  body {
-    font-family: 'Syne', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+> **🎓 Software Engineering Student | ⚡ Full-Stack & AI Developer | 🏆 Competitive Programmer**  
+> *Transforming ideas into elegant code • Building the future, one commit at a time*
 
-  /* Animated background grid */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(79,142,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(79,142,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
-  }
+📍 Based in Jordan • 🎓 Studying Software Engineering • 🏠 Self-directed Learner • 🌐 Open to collaborations & internships
 
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 24px;
-    position: relative;
-    z-index: 1;
-  }
+---
 
-  /* ── HERO ── */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 80px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-  }
+## 👤 About Me
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 120px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-  }
+<div align="center">
 
-  .hero-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero-label::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  h1 {
-    font-size: clamp(36px, 6vw, 64px);
-    font-weight: 800;
-    line-height: 1.05;
-    color: var(--white);
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-  }
-
-  h1 span {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-bio {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--muted);
-    max-width: 540px;
-    margin-bottom: 28px;
-  }
-
-  .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    padding: 5px 12px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--muted);
-    background: var(--surface);
-    letter-spacing: 0.5px;
-    transition: all 0.2s;
-  }
-
-  .tag:hover { border-color: var(--accent); color: var(--accent); }
-  .tag.active { border-color: var(--accent2); color: var(--accent2); background: rgba(124,93,250,0.08); }
-
-  .hero-avatar {
-    width: 110px;
-    height: 110px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    flex-shrink: 0;
-    position: relative;
-    box-shadow: 0 0 0 1px var(--border), 0 20px 60px rgba(79,142,255,0.15);
-  }
-
-  .hero-avatar::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 17px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
-    z-index: -1;
-    opacity: 0.4;
-    filter: blur(8px);
-  }
-
-  /* ── SECTION HEADER ── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 32px;
-  }
-
-  .section-header h2 {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-family: 'Space Mono', monospace;
-  }
-
-  .section-header::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* ── LANGUAGES GRID ── */
-  .section { margin-bottom: 72px; }
-
-  .lang-category {
-    margin-bottom: 32px;
-  }
-
-  .lang-category-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .lang-category-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-    opacity: 0.5;
-  }
-
-  .langs-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .lang-chip {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 13px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    transition: all 0.2s ease;
-    cursor: default;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 0.3px;
-  }
-
-  .lang-chip:hover {
-    border-color: var(--accent);
-    color: var(--white);
-    background: var(--surface2);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(79,142,255,0.12);
-  }
-
-  .lang-chip .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ── PROJECTS ── */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    transition: all 0.25s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-
-  .project-card:hover::before { transform: scaleX(1); }
-  .project-card:hover {
-    border-color: rgba(79,142,255,0.3);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-    transform: translateY(-3px);
-  }
-
-  .project-icon {
-    font-size: 28px;
-    margin-bottom: 14px;
-  }
-
-  .project-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 8px;
-  }
-
-  .project-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-
-  .project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .tech-badge {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    padding: 3px 8px;
-    background: rgba(79,142,255,0.08);
-    border: 1px solid rgba(79,142,255,0.2);
-    border-radius: 4px;
-    color: var(--accent);
-    letter-spacing: 0.5px;
-  }
-
-  /* ── STATS ── */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .stat-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 16px;
-    text-align: center;
-    transition: all 0.2s;
-  }
-
-  .stat-card:hover {
-    border-color: rgba(79,142,255,0.3);
-    transform: translateY(-2px);
-  }
-
-  .stat-value {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 4px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .stat-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  /* ── PHILOSOPHY ── */
-  .principles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .principle {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    transition: border-color 0.2s;
-  }
-
-  .principle:hover { border-color: rgba(0,229,160,0.3); }
-
-  .principle-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-
-  .principle-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 4px;
-  }
-
-  .principle-text {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
-
-  /* ── QUOTE ── */
-  .quote-block {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 36px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 72px;
-  }
-
-  .quote-block::before {
-    content: '"';
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    font-size: 180px;
-    color: rgba(79,142,255,0.05);
-    font-family: Georgia, serif;
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .quote-arabic {
-    font-family: 'Noto Sans Arabic', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--gold);
-    direction: rtl;
-    margin-bottom: 20px;
-    line-height: 1.8;
-  }
-
-  .quote-arabic .line {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--muted);
-    margin-top: 6px;
-  }
-
-  .quote-divider {
-    width: 60px;
-    height: 1px;
-    background: var(--border);
-    margin: 20px auto;
-  }
-
-  .quote-credit {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 2px;
-  }
-
-  /* ── CONNECT ── */
-  .connect-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-
-  .connect-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 14px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--text);
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .connect-card:hover {
-    border-color: rgba(79,142,255,0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    color: var(--white);
-  }
-
-  .connect-card .icon { font-size: 22px; }
-  .connect-card .label {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .connect-card:hover .label { color: var(--accent); }
-
-  /* ── FOOTER ── */
-  .footer {
-    margin-top: 80px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.5px;
-  }
-
-  .footer-flag { font-size: 18px; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero { animation: fadeUp 0.6s ease both; }
-  .section { animation: fadeUp 0.6s ease both; }
-  .section:nth-child(2) { animation-delay: 0.1s; }
-  .section:nth-child(3) { animation-delay: 0.2s; }
-  .section:nth-child(4) { animation-delay: 0.3s; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 640px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-avatar { display: none; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .connect-grid { grid-template-columns: repeat(2, 1fr); }
-    .principles { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-<div class="container">
-
-  <!-- HERO -->
-  <header class="hero">
-    <div>
-      <div class="hero-label">Software Engineering Student</div>
-      <h1>Omar<br/><span>Al-Turk</span></h1>
-      <p class="hero-bio">
-        Full-Stack & AI Developer based in Jordan. Passionate about turning complex ideas into elegant, purposeful code. Competitive programmer and open-source enthusiast.
-      </p>
-      <div class="hero-tags">
-        <span class="tag active">Full-Stack</span>
-        <span class="tag active">AI / ML</span>
-        <span class="tag active">Competitive Programming</span>
-        <span class="tag">📍 Jordan</span>
-        <span class="tag">🟢 Open to internships</span>
-      </div>
-    </div>
-    <div class="hero-avatar">👨‍💻</div>
-  </header>
-
-  <!-- LANGUAGES & TECHNOLOGIES -->
-  <section class="section">
-    <div class="section-header"><h2>// Languages & Tech</h2></div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">Core Languages</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#3776AB"></span>Python</div>
-        <div class="lang-chip"><span class="dot" style="background:#00599C"></span>C++</div>
-        <div class="lang-chip"><span class="dot" style="background:#ED8B00"></span>Java</div>
-        <div class="lang-chip"><span class="dot" style="background:#F7DF1E"></span>JavaScript</div>
-        <div class="lang-chip"><span class="dot" style="background:#007ACC"></span>TypeScript</div>
-        <div class="lang-chip"><span class="dot" style="background:#239120"></span>C#</div>
-        <div class="lang-chip"><span class="dot" style="background:#00ADD8"></span>Go</div>
-        <div class="lang-chip"><span class="dot" style="background:#CE422B"></span>Rust</div>
-        <div class="lang-chip"><span class="dot" style="background:#7F52FF"></span>Kotlin</div>
-        <div class="lang-chip"><span class="dot" style="background:#FA7343"></span>Swift</div>
-        <div class="lang-chip"><span class="dot" style="background:#0175C2"></span>Dart</div>
-        <div class="lang-chip"><span class="dot" style="background:#276DC3"></span>R</div>
-        <div class="lang-chip"><span class="dot" style="background:#777BB4"></span>PHP</div>
-      </div>
-    </div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">Web & Mobile</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#E34F26"></span>HTML5</div>
-        <div class="lang-chip"><span class="dot" style="background:#1572B6"></span>CSS3</div>
-        <div class="lang-chip"><span class="dot" style="background:#61DAFB"></span>React</div>
-        <div class="lang-chip"><span class="dot" style="background:#000000"></span>Next.js</div>
-        <div class="lang-chip"><span class="dot" style="background:#4FC08D"></span>Vue.js</div>
-        <div class="lang-chip"><span class="dot" style="background:#DD0031"></span>Angular</div>
-        <div class="lang-chip"><span class="dot" style="background:#339933"></span>Node.js</div>
-        <div class="lang-chip"><span class="dot" style="background:#000000"></span>Express</div>
-        <div class="lang-chip"><span class="dot" style="background:#02569B"></span>Flutter</div>
-        <div class="lang-chip"><span class="dot" style="background:#61DAFB"></span>React Native</div>
-        <div class="lang-chip"><span class="dot" style="background:#E10098"></span>GraphQL</div>
-      </div>
-    </div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">Databases</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#316192"></span>PostgreSQL</div>
-        <div class="lang-chip"><span class="dot" style="background:#4479A1"></span>MySQL</div>
-        <div class="lang-chip"><span class="dot" style="background:#47A248"></span>MongoDB</div>
-        <div class="lang-chip"><span class="dot" style="background:#DC382D"></span>Redis</div>
-        <div class="lang-chip"><span class="dot" style="background:#003B57"></span>SQLite</div>
-        <div class="lang-chip"><span class="dot" style="background:#FFCA28"></span>Firebase</div>
-      </div>
-    </div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">AI / ML & Data Science</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#FF6F00"></span>TensorFlow</div>
-        <div class="lang-chip"><span class="dot" style="background:#EE4C2C"></span>PyTorch</div>
-        <div class="lang-chip"><span class="dot" style="background:#5C3EE8"></span>OpenCV</div>
-        <div class="lang-chip"><span class="dot" style="background:#F7931E"></span>Scikit-learn</div>
-        <div class="lang-chip"><span class="dot" style="background:#4DABCF"></span>NumPy</div>
-        <div class="lang-chip"><span class="dot" style="background:#150458"></span>Pandas</div>
-        <div class="lang-chip"><span class="dot" style="background:#11557C"></span>Matplotlib</div>
-      </div>
-    </div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">DevOps & Tools</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#F05032"></span>Git</div>
-        <div class="lang-chip"><span class="dot" style="background:#181717"></span>GitHub</div>
-        <div class="lang-chip"><span class="dot" style="background:#FC6D26"></span>GitLab</div>
-        <div class="lang-chip"><span class="dot" style="background:#2496ED"></span>Docker</div>
-        <div class="lang-chip"><span class="dot" style="background:#326CE5"></span>Kubernetes</div>
-        <div class="lang-chip"><span class="dot" style="background:#FCC624"></span>Linux</div>
-        <div class="lang-chip"><span class="dot" style="background:#4EAA25"></span>Bash</div>
-        <div class="lang-chip"><span class="dot" style="background:#FF6C37"></span>Postman</div>
-        <div class="lang-chip"><span class="dot" style="background:#000000"></span>Vercel</div>
-      </div>
-    </div>
-
-    <div class="lang-category">
-      <div class="lang-category-title">Concepts & Methodologies</div>
-      <div class="langs-grid">
-        <div class="lang-chip"><span class="dot" style="background:#4f8eff"></span>OOP</div>
-        <div class="lang-chip"><span class="dot" style="background:#7c5dfa"></span>DSA</div>
-        <div class="lang-chip"><span class="dot" style="background:#00e5a0"></span>REST API</div>
-        <div class="lang-chip"><span class="dot" style="background:#f0c060"></span>TDD</div>
-        <div class="lang-chip"><span class="dot" style="background:#4f8eff"></span>Agile</div>
-        <div class="lang-chip"><span class="dot" style="background:#7c5dfa"></span>CI/CD</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section">
-    <div class="section-header"><h2>// Featured Projects</h2></div>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-icon">🛒</div>
-        <div class="project-name">Store Management System</div>
-        <div class="project-desc">Console-based inventory management demonstrating solid OOP principles with JSON persistence and sales reporting.</div>
-        <div class="project-tech">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">OOP</span>
-          <span class="tech-badge">JSON</span>
-          <span class="tech-badge">DSA</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">🤖</div>
-        <div class="project-name">AI Image Recognition Bot</div>
-        <div class="project-desc">Real-time object detection and classification using deep learning with TensorFlow and OpenCV pipeline.</div>
-        <div class="project-tech">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">TensorFlow</span>
-          <span class="tech-badge">OpenCV</span>
-          <span class="tech-badge">NumPy</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">⚡</div>
-        <div class="project-name">Competitive Programming Solver</div>
-        <div class="project-desc">Automated problem analyzer with dynamic programming optimization, test-case generation, and progress tracking.</div>
-        <div class="project-tech">
-          <span class="tech-badge">C++</span>
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">Algorithms</span>
-          <span class="tech-badge">Bash</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon">📋</div>
-        <div class="project-name">Full-Stack Task Manager</div>
-        <div class="project-desc">Modern productivity app with JWT auth, PostgreSQL relational design, and responsive React frontend.</div>
-        <div class="project-tech">
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">Node.js</span>
-          <span class="tech-badge">PostgreSQL</span>
-          <span class="tech-badge">JWT</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PHILOSOPHY -->
-  <section class="section">
-    <div class="section-header"><h2>// Philosophy</h2></div>
-    <div class="principles">
-      <div class="principle">
-        <div class="principle-icon">🏗️</div>
-        <div>
-          <div class="principle-title">Structure First</div>
-          <div class="principle-text">Architecture matters more than clever tricks. Design before code.</div>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="principle-icon">🧹</div>
-        <div>
-          <div class="principle-title">Clean Code</div>
-          <div class="principle-text">Readable beats writable — your future self will thank you.</div>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="principle-icon">🤝</div>
-        <div>
-          <div class="principle-title">Collaboration</div>
-          <div class="principle-text">Great software is built together, never in isolation.</div>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="principle-icon">🌱</div>
-        <div>
-          <div class="principle-title">Continuous Growth</div>
-          <div class="principle-text">Every bug is a lesson. Every project is progress.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="section">
-    <div class="section-header"><h2>// Stats</h2></div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-value">150K+</div>
-        <div class="stat-label">Followers</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">2.5K+</div>
-        <div class="stat-label">Stars</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">800+</div>
-        <div class="stat-label">Forks</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">47+</div>
-        <div class="stat-label">Bugs Crushed</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <div class="quote-block">
-    <div class="quote-arabic">
-      لَقَدْ عُدْنَا غُرَبَاءَ كَمَا كُنَّا
-      <span class="line">في نِهايةْ هذه الرِّحْلة الغَريبة جِدّاً — تْخَرَّجْنا بَعْضَ الدُّروسْ، بَعْضَ الجُروحْ، وَالكَثيرْ مِنَ الجِلْدِ السّميكْ</span>
-    </div>
-    <div class="quote-divider"></div>
-    <div class="quote-credit">فَ شُكراً لاسْتِماعِكُمْ • شُكْراً لِكُلّْ ما حَصَلْ ✨</div>
-  </div>
-
-  <!-- CONNECT -->
-  <section class="section">
-    <div class="section-header"><h2>// Let's Connect</h2></div>
-    <div class="connect-grid">
-      <a class="connect-card" href="https://github.com/OmarAlTurk">
-        <span class="icon">🐙</span>
-        <span class="label">GitHub</span>
-      </a>
-      <a class="connect-card" href="mailto:omaraltourk553@gmail.com">
-        <span class="icon">📧</span>
-        <span class="label">Email</span>
-      </a>
-      <a class="connect-card" href="https://www.instagram.com/i.ixwy">
-        <span class="icon">📸</span>
-        <span class="label">Instagram</span>
-      </a>
-      <a class="connect-card" href="https://t.me/X_D_Y_2006">
-        <span class="icon">✈️</span>
-        <span class="label">Telegram</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-text">Made with ❤️ by Omar Yousef Dawod Al-Turk • © 2026</div>
-    <div class="footer-flag">🇯🇴</div>
-  </footer>
+```yaml
+👤 Name:   Omar Yousef Dawod Al-Turk
+🎓 Role:   Software Engineering Student
+🎯 Focus:  Full-Stack • AI/ML • Competitive Programming
+💡 Motto:  "Code with purpose, build with passion"
+🟢 Status: Open to internships & collaborations
+```
 
 </div>
-</body>
-</html>
+
+### 🌟 The Story Behind the Code
+
+> *"Every great developer you know got there by solving problems they were unqualified to solve until they actually did it."*
+
+Hi there! 👋 I'm **Omar**, a passionate Software Engineering student from Jordan. My journey with code started with a simple question: *"How can I turn ideas into reality?"* — and I haven't stopped building since.
+
+### 💫 What Makes Me Tick?
+
+<div align="center">
+
+| 🧠 Mindset | 🛠️ Craft | 🚀 Impact |
+|-----------|---------|----------|
+| Curious learner who loves deep-diving into algorithms | Clean, maintainable code with modern patterns | Solutions that solve real human problems |
+| Problem-solver who enjoys the "aha!" moment | Testing, debugging, and iterating until it's right | Open-source contributions & knowledge sharing |
+| Believer in fundamentals before frameworks | Documentation that helps the next developer | Mentoring others on their coding journey |
+
+</div>
+
+### 🎯 My Development Philosophy
+
+```mermaid
+graph TD
+    A["💡 Idea"] --> B["📐 Plan & Design"]
+    B --> C["💻 Code with Intent"]
+    C --> D["🧪 Test & Refine"]
+    D --> E["📚 Document & Share"]
+    E --> F["🔄 Learn & Improve"]
+    F --> A
+```
+
+✨ **Core Principles:**
+- 🏗️ **Structure First**: Architecture matters more than clever tricks
+- 🧹 **Clean Code**: Readable > Writeable — your future self will thank you
+- 🤝 **Collaboration**: Great code is built together, not in isolation
+- 🌱 **Continuous Growth**: Every bug is a lesson, every project is progress
+
+### 🏆 Quick Facts
+
+<div align="center">
+
+| 📊 Stat | 🔢 Value |
+|---------|----------|
+| ☕ Cups of coffee while coding | ∞ |
+| 🐛 Bugs squashed this month | 47+ |
+| 📚 Concepts mastered | DSA, OOP, REST, CI/CD |
+| 🌍 Languages spoken | Arabic, English, Python, Java, C++ |
+| 🎮 Favorite way to unwind | Competitive programming & tech podcasts |
+
+</div>
+
+### 💬 Let's Connect On
+
+> *"I don't just write code — I craft solutions that matter, learn from every challenge, and believe that the best projects are built with heart."* 🚀
+
+---
+
+## 🛠️ 35+ Languages & Technologies
+
+<p align="center">
+  <strong>💻 Core Programming Languages</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=2B5B84" alt="Python"/>
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white&labelColor=003366" alt="C++"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&labelColor=B35C00" alt="Java"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=333&labelColor=E5C02C" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&labelColor=005A9C" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white&labelColor=1B6B18" alt="C#"/>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white&labelColor=0087A8" alt="Go"/>
+  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white&labelColor=333" alt="Rust"/>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=6642CC" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white&labelColor=C95A36" alt="Swift"/>
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&labelColor=015A9C" alt="Dart"/>
+</p>
+<p align="center">
+  <strong>🌐 Web & Mobile Development</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=C43D1E" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=0F5A96" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=0D1117&labelColor=2C8EC9" alt="React"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=333" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white&labelColor=3D9970" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&labelColor=B30027" alt="Angular"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&labelColor=227722" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white&labelColor=333" alt="Express"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=5A6696" alt="PHP"/>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white&labelColor=02447D" alt="Flutter"/>
+  <img src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=0D1117&labelColor=2C8EC9" alt="React Native"/>
+</p>
+
+<p align="center">
+  <strong>🗄️ Databases & Data Management</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=234F78" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=366484" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=367A37" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&labelColor=B02D24" alt="Redis"/>
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white&labelColor=002F45" alt="SQLite"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=000&labelColor=CCA322" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=366484" alt="SQL"/>
+  <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white&labelColor=333" alt="JSON"/>
+</p>
+
+<p align="center">
+  <strong>🤖 AI, ML & Data Science</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=CC5900" alt="TensorFlow"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=BF3D23" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=4A31B8" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white&labelColor=C67718" alt="Scikit-learn"/>
+  <img src="https://img.shields.io/badge/NumPy-4DABCF?style=for-the-badge&logo=numpy&logoColor=white&labelColor=3D8AA3" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=0F033A" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white&labelColor=0D4261" alt="Matplotlib"/>
+  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white&labelColor=1F5699" alt="R"/>
+</p>
+
+<p align="center">
+  <strong>⚙️ Tools, DevOps & Platforms</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=C74128" alt="Git"/>  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white&labelColor=CA571E" alt="GitLab"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=1976B8" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white&labelColor=2855B3" alt="Kubernetes"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=C99E1D" alt="Linux"/>
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white&labelColor=3D8A1E" alt="Bash"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=CC562C" alt="Postman"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=333" alt="Vercel"/>
+</p>
+
+<p align="center">
+  <strong>🧠 Core Concepts & Methodologies</strong>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/OOP-0D1117?style=for-the-badge&logo=codecademy&logoColor=white&labelColor=333" alt="Object-Oriented Programming"/>
+  <img src="https://img.shields.io/badge/DSA-0D1117?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=333" alt="Data Structures & Algorithms"/>
+  <img src="https://img.shields.io/badge/REST_API-0D1117?style=for-the-badge&logo=postman&logoColor=white&labelColor=333" alt="REST API"/>
+  <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white&labelColor=B30079" alt="GraphQL"/>
+  <img src="https://img.shields.io/badge/TDD-0D1117?style=for-the-badge&logo=jest&logoColor=white&labelColor=333" alt="Test-Driven Development"/>
+  <img src="https://img.shields.io/badge/Agile-0D1117?style=for-the-badge&logo=jira&logoColor=white&labelColor=333" alt="Agile Methodology"/>
+  <img src="https://img.shields.io/badge/CI_CD-0D1117?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=333" alt="CI/CD"/>
+</p>
+
+---
+
+## 🚀 Featured Projects
+
+### 🛒 Store Management System (OOP Project)
+> Console-based inventory management system demonstrating solid Object-Oriented Programming principles.
+
+✅ **Encapsulation • Inheritance • Polymorphism** • 💾 **JSON file persistence** • 📊 **Sales & inventory reports** • 🎯 **Beginner-friendly architecture**
+
+```yaml
+Technologies: Python • OOP • File Handling • Data Structures • Dict/JSON Management
+```
+
+🔹 *Personal project to master OOP concepts while building something practical*  
+[🔗 View Repository](https://github.com/OmarAlTurk/store-manager) • [📋 UML Diagram](#)
+
+---
+
+### 🤖 AI Image Recognition Bot
+> Real-time object detection and classification using deep learning fundamentals.
+
+✅ **TensorFlow model integration** • 🚀 **OpenCV for real-time processing** • 📦 **Modular & extensible design**
+
+```yaml
+Technologies: Python • TensorFlow • OpenCV • NumPy • Pillow
+```
+[🔗 View Repository](https://github.com/OmarAlTurk/ai-bot) • [📄 Demo Video](#) • [🧪 Try Online](#)
+
+---
+
+### ⚡ Competitive Programming Solver
+> Automated problem analyzer with dynamic programming optimization and test-case generation.
+
+✅ **Algorithmic problem-solving** • 🧠 **Time complexity optimization** • 📈 **Progress tracking**
+
+```yaml
+Technologies: C++ • Python • Algorithms • Codeforces API • Bash Scripts
+```
+
+[🔗 View Repository](https://github.com/OmarAlTurk/cp-solver) • [📊 Problem Stats](#)
+
+---
+
+### 📋 Full-Stack Task Manager
+> Modern productivity web app with authentication, clean UI, and persistent storage.
+
+✅ **JWT Authentication** • 🗄️ **PostgreSQL relational design** • 🎨 **Responsive React frontend**
+
+```yaml
+Technologies: React • Node.js • Express • PostgreSQL • JWT • CSS3
+```
+
+[🔗 View Repository](https://github.com/OmarAlTurk/task-manager) • [🌐 Live Demo](#) • [📖 API Docs](#)
+
+---
+
+ 
+
+---
+
+## 👀 Profile Statistics
+<div align="center">
+
+### 🏆 Community Impact
+
+| Metric | Value | Badge |
+|--------|-------|-------|
+| 👥 Followers | 150K+ | ![Followers](https://img.shields.io/badge/Followers-150K-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117) |
+| 👁️ Profile Views | 150K+ | ![Views](https://img.shields.io/badge/Profile_Views-150K-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117) |
+| ⭐ Total Stars | 2.5K+ | ![Stars](https://img.shields.io/badge/Stars-2.5K-F1E05A?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117) |
+| 🍴 Forks | 800+ | ![Forks](https://img.shields.io/badge/Forks-800-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117) |
+
+</div>
+
+---
+
+## 💬 Favorite Quote
+
+<div align="center">
+
+### لَقَدْ عُدْنَا غُرَبَاءَ كَمَا كُنَّا
+
+> **Understand me**  
+> في نِهايةْ هذه الرِّحْلة الغَريبة جِدّاً  
+> تْخَرَّجْنا بَعْضَ الدُّروسْ  
+> بَعْضَ الجُروحْ  
+> وَالكَثيرْ الكَثيرْ الكَثيرْ مِنَ الجِلْدِ السّميكْ  
+> وْهيكْ شَغْلاتْ  
+>  
+> **فَ شُكراً لاسْتِماعِكُمْ**  
+> **وَ شُكْراً لِكُلّْ ما حَصَلْ** ✨
+
+</div>
+
+---
+
+## 📫 Let's Connect
+
+> 🤝 *Open to **internships**, **open-source collaborations**, **study groups**, and **innovative project ideas**. Let's build something amazing together!*
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000)](https://github.com/OmarAlTurk)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=A83C2C)](mailto:omaraltourk553@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=B8334C)](https://www.instagram.com/i.ixwy)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1E84BC)](https://t.me/X_D_Y_2006)
+
+</div>
+
+---
+<!-- 
+🔧 MAINTENANCE NOTES:
+• Update projects quarterly with new metrics & links
+• Keep skills aligned with your current learning path  
+• Add new certifications immediately after earning them
+• Refresh GitHub stats badges if they stop loading
+• Test all external links monthly for broken URLs
+-->
+
+<p align="center">
+  <strong>Made with ❤️ and lots of ☕ by Omar Yousef Dawod Al-Turk</strong><br>
+  <sub>© 2026 • Last updated: March 2026 • 🇯🇴 Jordan</sub>
+</p>
