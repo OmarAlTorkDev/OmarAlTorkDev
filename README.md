@@ -169,61 +169,6 @@ graph TD
   <img src="https://img.shields.io/badge/CI_CD-0D1117?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=333" alt="CI/CD"/>
 </p>
 
----
-
-## 🚀 Featured Projects
-
-### 🛒 Store Management System (OOP Project)
-> Console-based inventory management system demonstrating solid Object-Oriented Programming principles.
-
-✅ **Encapsulation • Inheritance • Polymorphism** • 💾 **JSON file persistence** • 📊 **Sales & inventory reports** • 🎯 **Beginner-friendly architecture**
-
-```yaml
-Technologies: Python • OOP • File Handling • Data Structures • Dict/JSON Management
-```
-
-🔹 *Personal project to master OOP concepts while building something practical*  
-[🔗 View Repository](https://github.com/OmarAlTurk/store-manager) • [📋 UML Diagram](#)
-
----
-
-### 🤖 AI Image Recognition Bot
-> Real-time object detection and classification using deep learning fundamentals.
-
-✅ **TensorFlow model integration** • 🚀 **OpenCV for real-time processing** • 📦 **Modular & extensible design**
-
-```yaml
-Technologies: Python • TensorFlow • OpenCV • NumPy • Pillow
-```
-[🔗 View Repository](https://github.com/OmarAlTurk/ai-bot) • [📄 Demo Video](#) • [🧪 Try Online](#)
-
----
-
-### ⚡ Competitive Programming Solver
-> Automated problem analyzer with dynamic programming optimization and test-case generation.
-
-✅ **Algorithmic problem-solving** • 🧠 **Time complexity optimization** • 📈 **Progress tracking**
-
-```yaml
-Technologies: C++ • Python • Algorithms • Codeforces API • Bash Scripts
-```
-
-[🔗 View Repository](https://github.com/OmarAlTurk/cp-solver) • [📊 Problem Stats](#)
-
----
-
-### 📋 Full-Stack Task Manager
-> Modern productivity web app with authentication, clean UI, and persistent storage.
-
-✅ **JWT Authentication** • 🗄️ **PostgreSQL relational design** • 🎨 **Responsive React frontend**
-
-```yaml
-Technologies: React • Node.js • Express • PostgreSQL • JWT • CSS3
-```
-
-[🔗 View Repository](https://github.com/OmarAlTurk/task-manager) • [🌐 Live Demo](#) • [📖 API Docs](#)
-
----
 
  
 
